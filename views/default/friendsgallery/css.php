@@ -33,4 +33,6 @@
 .elgg-tabs {
 	margin-bottom: 10px;
 }
-
+.elgg-module-widget .elgg-gallery {
+	margin-bottom: 5px;
+}
