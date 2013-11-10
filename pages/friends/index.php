@@ -6,12 +6,9 @@
  * @subpackage Social.Friends
  */
 
-elgg_load_js('friendsgallery');
-
 $owner = elgg_get_page_owner_entity();
-if (!$owner) {
-	// unknown user so send away (@todo some sort of 404 error)
-	forward();
+if (!$owner) {	
+	forward('', '404');
 }
 
 if ($handler == 'friendsof') {
@@ -24,30 +21,30 @@ $options = array(
 	'relationship' => 'friend',
 	'relationship_guid' => $owner->getGUID(),
 	'type' => 'user',
-	'full_view' => FALSE,
-	'count' => TRUE
+	'full_view' => false,
+	'count' => true
 );
 
 switch ($handler) {
 	case 'friendsof':
-		$options['inverse_relationship'] = TRUE;
+		$options['inverse_relationship'] = true;
 		break;
 	case 'friendsgallery':
-		$options['inverse_relationship'] = FALSE;
+		$options['inverse_relationship'] = false;
 		$options['limit'] = 12;		
 		$options['list_class'] = "elgg-gallery-friends";		
-		$options['size'] = "medium";
+		$options['size'] = "large";
+		$options['no_results'] = elgg_echo('friends:none');
+		$options['use_hover'] = false;
+		$options['use_link'] = false;
 		break;
 	case 'friends':		
 	default:
-		$options['inverse_relationship'] = FALSE;
+		$options['inverse_relationship'] = false;
+		$options['no_results'] = elgg_echo('friends:none');
 		break;
 }
-
 $content = elgg_list_entities_from_relationship($options);
-if (!$content) {
-	$content = elgg_echo('friends:none');
-}
 
 $number = elgg_get_entities_from_relationship($options);
 

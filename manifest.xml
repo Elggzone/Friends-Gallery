@@ -3,15 +3,14 @@
 	<name>Friends Gallery</name>
 	<id>friendsgallery</id>
 	<author>Per Jensen - Elggzone</author>
-	<version>2013.03.17</version>
+	<version>2013.11.10</version>
 	<category>bundled</category>
 	<description>Adds Friends Gallery View and tabbed navigation</description>
 	<website>http://www.perjensen-online.dk</website>
-	<repository>https://github.com/Elggzone/River-Addon</repository>
 	<copyright>(C) Per Jensen - perjensen-online.dk 2013</copyright>
 	<license>GNU General Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
-		<version>1.8</version>
+		<version>1.9</version>
 	</requires>
 </plugin_manifest>
