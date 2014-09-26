@@ -10,8 +10,8 @@ elgg_register_event_handler('init', 'system', 'friendsgallery_init');
 
 function friendsgallery_init() {
 	
-	elgg_unregister_page_handler('friends', '_elgg_friends_page_handler');
-	elgg_unregister_page_handler('friendsof', '_elgg_friends_page_handler');
+	elgg_unregister_page_handler('friends');
+	elgg_unregister_page_handler('friendsof');
 			
 	elgg_register_page_handler('friends', 'custom_friends_page_handler');
 	elgg_register_page_handler('friendsof', 'custom_friends_page_handler');	
