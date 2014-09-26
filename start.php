@@ -18,8 +18,29 @@ function friendsgallery_init() {
 	elgg_register_page_handler('friendsgallery', 'custom_friends_page_handler');
 	
 	elgg_register_event_handler('pagesetup', 'system', 'friendsgallery_pagesetup', 0);
+	
+	elgg_register_plugin_hook_handler('register', 'menu:entity', 'friendsgallery_custom_entity_menu');
 
 	elgg_extend_view('css/elgg', 'friendsgallery/css');	
+}
+
+/**
+ * Remove banned and location menu items from the entity menu
+ * in friendsgallery context.
+ */
+function friendsgallery_custom_entity_menu($hook, $type, $menu, $params) {
+	
+	if (!elgg_in_context('friendsgallery')) {
+		return;
+	}
+
+	foreach ($menu as $index => $item) {
+		if ($item->getName() == 'banned' || $item->getName() == 'location') {
+			unset($menu[$index]);
+		}
+	}
+
+	return $menu;
 }
 
 function custom_friends_page_handler($segments, $handler) {

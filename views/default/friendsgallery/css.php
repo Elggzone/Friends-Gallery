@@ -11,7 +11,7 @@
 	FRIENDS GALLERY
 *************************************** */
 .elgg-avatar-large > a > img {
-	max-width: 100%; /* core fix, remove rule set when changed in core */
+	max-width: 100%;
 	height: auto;
 }
 .elgg-gallery-friends {
@@ -43,8 +43,7 @@
 	overflow: hidden;
 	padding: 0;
 }
-.elgg-gallery-friends .elgg-image-block .elgg-subtext,
-.elgg-gallery-friends .elgg-image-block .elgg-menu-entity {
+.elgg-gallery-friends .elgg-image-block .elgg-subtext {
 	display: none;
 }
 .elgg-gallery-friends .elgg-image-block img {

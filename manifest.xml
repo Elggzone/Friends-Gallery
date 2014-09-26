@@ -3,11 +3,11 @@
 	<name>Friends Gallery</name>
 	<id>friendsgallery</id>
 	<author>Per Jensen - Elggzone</author>
-	<version>2013.11.10</version>
+	<version>2014.09.26</version>
 	<category>bundled</category>
 	<description>Adds Friends Gallery View and tabbed navigation</description>
 	<website>http://www.perjensen-online.dk</website>
-	<copyright>(C) Per Jensen - perjensen-online.dk 2013</copyright>
+	<copyright>(C) Per Jensen - perjensen-online.dk 2014</copyright>
 	<license>GNU General Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>

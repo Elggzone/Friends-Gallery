@@ -37,6 +37,7 @@ switch ($handler) {
 		$options['no_results'] = elgg_echo('friends:none');
 		$options['use_hover'] = false;
 		$options['use_link'] = false;
+		elgg_set_context('friendsgallery');
 		break;
 	case 'friends':		
 	default:

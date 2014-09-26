@@ -1,5 +1,10 @@
 = Version history =
 
-2013.11.10:
+2014.07.12:
 
 - Initial release for Elgg 1.9
+
+2014.09.26:
+
+- Fix: removes function name from unregister page handler
+- Change: entity menu items removed by menu:entity hook
